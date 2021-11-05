@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_logo"
+        android:icon="@drawable/quick"
+        android:title ="@string/logo"
+        />
+
+    <item
+        android:id="@+id/ic_quick_pc"
+        android:icon="@drawable/quiz"
+        android:title ="@string/QuickPC"
+        />
+
+</menu>

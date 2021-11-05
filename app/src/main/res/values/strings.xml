@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sample Application for Bottom Navigation</string>
+    <string name="logo">Logo</string>
+    <string name="QuickPC">QuickPC </string>
+</resources>
