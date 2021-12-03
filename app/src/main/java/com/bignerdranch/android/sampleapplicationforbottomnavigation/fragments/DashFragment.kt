@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.bignerdranch.android.sampleapplicationforbottomnavigation.ExampleAdapter
+import com.bignerdranch.android.sampleapplicationforbottomnavigation.ExampleItem
 import com.bignerdranch.android.sampleapplicationforbottomnavigation.R
+import kotlinx.android.synthetic.main.fragment_dash.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,11 +32,36 @@ class DashFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        val exampleList = generateDummyList(500)
+        recycler_view.adapter = ExampleAdapter(exampleList)
+        recycler_view.layoutManager = LinearLayoutManager(this)
+        recycler_view.setHasFixedSize(true)
+    }
+    
+
+    private fun generateDummyList(size: Int): List<ExampleItem> {
+
+        val list = ArrayList<ExampleItem>()
+
+        for (i in 0 until size) {
+            val drawable = when (i % 3) {
+                0 -> R.drawable.ic_quick_pc
+                1 -> R.drawable.ic_quiz
+                else -> R.drawable.ic_quick_pc
+            }
+
+            val item = ExampleItem(drawable, "Item $i", "Line 2")
+            list += item
+        }
+
+        return list
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
+
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dash, container, false)
