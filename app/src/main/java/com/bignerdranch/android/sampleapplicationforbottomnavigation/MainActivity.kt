@@ -30,6 +30,8 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+
     }
 
     private fun replaceFragment(fragment: Fragment){
