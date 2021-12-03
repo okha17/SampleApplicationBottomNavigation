@@ -37,7 +37,7 @@ class DashFragment : Fragment() {
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
     }
-    
+
 
     private fun generateDummyList(size: Int): List<ExampleItem> {
 
