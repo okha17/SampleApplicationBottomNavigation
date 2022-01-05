@@ -46,8 +46,8 @@ class DashFragment : Fragment() {
         super.onViewCreated(itemView, savedInstanceState)
         val exampleList = generateDummyList(500)
 
-        recycler_view.setHasFixedSize(true)
-        recycler_view.apply {
+        this.recycler_view.setHasFixedSize(true)
+        this.recycler_view.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
             this.layoutManager = LinearLayoutManager(activity)
