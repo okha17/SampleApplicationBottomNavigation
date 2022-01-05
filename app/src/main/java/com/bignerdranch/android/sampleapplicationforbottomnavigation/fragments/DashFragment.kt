@@ -15,18 +15,6 @@ import kotlinx.android.synthetic.main.fragment_dash.*
 
 class DashFragment : Fragment() {
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder>? = null
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-
-    }
-
-
     private fun generateDummyList(size: Int): List<ExampleItem> {
 
         val list = ArrayList<ExampleItem>()
@@ -62,9 +50,9 @@ class DashFragment : Fragment() {
         recycler_view.apply {
             // set a LinearLayoutManager to handle Android
             // RecyclerView behavior
-            layoutManager = LinearLayoutManager(activity)
+            this.layoutManager = LinearLayoutManager(activity)
             // set the custom adapter to the RecyclerView
-            adapter = ExampleAdapter(exampleList)
+            this.adapter = ExampleAdapter(exampleList)
         }
     }
 
